@@ -27,11 +27,37 @@
     <br>
     <input type="range" id="valueSlider" min="0" max="100" value="25">
     <br>
-    <span id="selectedNumber"></span>
+    <p id="selectedNumber"></p>
     <br>
     <p id="hint"></p>
 
 
-    <script src="uppg7.js"></script>
+    <script>
+let valueSlider = document.getElementById("valueSlider");
+let selectedNumber= document.getElementById("selectedNumber");
+let hint = document.getElementById("hint");
+let correctNumber = 67;
+
+selectedNumber.innerText = valueSlider.value;
+
+// Event listener for slider change
+valueSlider.addEventListener("input", function() {
+selectedNumber.innerText = valueSlider.value;
+
+ if (valueSlider.value > correctNumber) {
+        hint.innerText= "to high"
+    
+    } else if (valueSlider.value < correctNumber) {
+       hint.innerText="to low"
+    } else if (valueSlider.value == correctNumber) {
+       hint.innerText = "Right!!!"
+
+    }
+
+    
+});
+
+
+    </script>
 </body>
 </html>

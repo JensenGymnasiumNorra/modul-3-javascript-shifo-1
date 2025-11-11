@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, invitial-scale=1.0" />
     <title>Uppgift 3: Change content</title>
     <style>
       .recipe {
@@ -14,10 +14,32 @@
     <button onclick="showCarbonara()">Show carbonara ingredients</button>
     <button onclick="showPizza()">Show pizza ingredients</button>
 
-    <div id="ingredients"></div>
+    <div id="ingredients"> </div>        
 
+    
     <script>
-      // TODO: Skapa funktionerna showCarbonara() och showPizza() för att visa ingredienserna för respektive recept i diven ingredients
+  function showCarbonara() {
+    document.getElementById("ingredients").innerHTML =
+      `<ul>
+        <li>Spaghetti</li>
+        <li>Egg</li>
+        <li>Bacon</li>
+        <li>Parmesan</li>
+        <li>Salt & Pepper</li>
+      </ul>`;
+  }
+
+  function showPizza() {
+    document.getElementById("ingredients").innerHTML =
+      `<ul>
+        <li>Pizzadeg</li>
+        <li>Tomatsås</li>
+        <li>Ost</li>
+        <li>Pepperoni</li>
+        <li>Grönsaker</li>
+      </ul>`; }
+
+ // TODO: Skapa funktionerna showCarbonara() och showPizza() för att visa ingredienserna för respektive recept i diven ingredients
     </script>
   </body>
 </html>
